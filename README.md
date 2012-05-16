@@ -1,4 +1,5 @@
-Pirate-Twitter
+Pirate Twitter 0.1
 ==============
 
-Node.js + Twitter API
+
+TODO proper readme
