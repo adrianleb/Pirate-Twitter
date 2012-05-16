@@ -1,0 +1,35 @@
+extends layout
+
+block content
+	div.wrapper
+		div(id='intro')
+		
+			h1(id='bigheadline')='Welcome aboard, Friend.'
+			- if (typeof User  != 'undefined' )
+				h2= 'It is good to have you on board ' + User
+
+				
+				
+				a(href='/logout')='Log Out'	
+
+
+			- else
+				h2= 'first time aboard? lets get started!'
+				a(href='/auth/twitter')='click here to login using twitter'	
+
+
+			
+			
+		- if (typeof User  != 'undefined' )
+			div
+
+				form(method='post',action='/')
+					textarea(name='thetextbox',id='textbox')='Type anything here'
+					br
+					br
+					input(type='submit',value='Tweet',id='sender')='Send a Message'
+
+
+			ul(id='reciever')
+
+		
